@@ -1,0 +1,172 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ac1eb9, #355ea0, #2b972b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #000000;
+}
+
+/* Animación del fondo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Contenedor de la tabla */
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+/* Efecto de Hover en el contenedor */
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Título de la página */
+h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+th {
+    background-color: #ff9100;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* Estilo para las filas de la tabla */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Botón de eliminar */
+.btn-danger {
+    background-color: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Botón de editar */
+.btn-warning {
+    background-color: #ffc107;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+}
+
+/* Mensajes flash */
+.flash-container {
+    margin-top: 20px;
+}
+
+.flash {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.flash.success {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.flash.danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+/* Estilo de botones para ir a otras páginas */
+.btn {
+    display: inline-block;
+    background-color: #4E8AE2;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0069d9;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out;
+}

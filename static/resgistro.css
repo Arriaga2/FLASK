@@ -1,0 +1,178 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ac1eb9, #355ea0, #2b972b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    color: #ffffff;
+}
+
+/* Animación del fondo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Contenedor del formulario */
+.container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 480px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+/* Efecto de Hover en el contenedor */
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Título del formulario */
+h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+    font-weight: bold;
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Campos del formulario */
+label {
+    font-size: 14px;
+    color: #555555;
+    margin-top: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+label i {
+    margin-right: 10px;
+    color: #ff9100;
+}
+
+/* Estilos de los campos de texto */
+input {
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+/* Efecto de foco en los campos de input */
+input:focus {
+    border-color: #ff9100;
+    outline: none;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    background-color: #ff9100;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 14px;
+    font-size: 16px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #ff3d00;
+}
+
+/* Mensajes flash */
+.flash-container {
+    margin-top: 20px;
+}
+
+.flash {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.flash.success {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.flash.danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+/* Estilos para los íconos */
+input[type="text"], input[type="email"], input[type="number"] {
+    position: relative;
+    padding-left: 35px;
+}
+
+input[type="text"]::before,
+input[type="email"]::before,
+input[type="number"]::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'FontAwesome';
+    font-size: 20px;
+    color: #ff9100;
+}
+
+input[type="text"]::before {
+    content: "\f007"; /* Icono de usuario */
+}
+
+input[type="email"]::before {
+    content: "\f0e0"; /* Icono de email */
+}
+
+input[type="number"]::before {
+    content: "\f080"; /* Icono de número */
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out;
+}

@@ -1,0 +1,103 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ff9100;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Contenedor del formulario */
+.container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Título del formulario */
+h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+/* Estilos del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Campos del formulario */
+label {
+    font-size: 14px;
+    color: #555555;
+    margin-top: 10px;
+}
+
+input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Botón de envío */
+input[type="submit"] {
+    background-color: #d15e00;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 12px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #b14e00;
+}
+
+/* Mensajes flash */
+.flash-container {
+    margin-top: 20px;
+}
+
+.flash {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.flash.success {
+    background-color: #28a745;
+    color: #ffffff;
+}
+
+.flash.danger {
+    background-color: #dc3545;
+    color: #ffffff;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container {
+    animation: fadeIn 0.5s ease-out;
+}
